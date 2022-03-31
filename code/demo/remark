@@ -1,0 +1,3 @@
+1. demo项目目录
+2. 执行该目录下文件  test.go
+docker exec go go run demo/test.go

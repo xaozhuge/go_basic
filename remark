@@ -1,0 +1,14 @@
+1. 启动docker环境，在 docker-compose.yml 同级目录下
+docker-compose up -d
+2. 查看容器是否正常启动
+docker ps -a
+3. 查看go版本,第一个go是服务的名称，第二个go是go命令
+docker exec go go version
+4. 进入容器内
+docker exec -it go /bin/bash
+5. 在容器内，查看$GOPATH
+进入容器，并 echo $GOPATH，结果为/go
+6. 本地$GOPATH，为./code
+./code 映射到容器 /go
+
+

@@ -1,0 +1,3 @@
+1. 当前目录为 $GOPATH目录
+2. 假设test.go，要执行该文件
+docker exec go go run test.go
