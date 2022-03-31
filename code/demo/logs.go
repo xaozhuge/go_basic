@@ -46,7 +46,7 @@ func checkFileIsExist(filename string) bool {
 func main() {
     var cst_zone = time.FixedZone("CST", 8 * 3600) // 东八
     startTime := time.Now().In(cst_zone).Format("2006-01-02 15:04:05")
-    var log_content = "日志内容是"+startTime
+    var log_content = startTime+":\n"+"日志内容"
     var filename    = "test.log"
     logs(log_content, filename)
 }
