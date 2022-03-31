@@ -10,5 +10,7 @@ docker exec -it go /bin/bash
 进入容器，并 echo $GOPATH，结果为/go
 6. 本地$GOPATH，为./code
 ./code 映射到容器 /go
+7. 关闭docker环境，在 docker-compose.yml 同级目录下
+docker-compose down
 
 
