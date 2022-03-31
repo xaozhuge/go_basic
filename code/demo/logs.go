@@ -4,6 +4,7 @@ import (
     "fmt"
     "os"
     "io"
+    "time"
 )
 
 func logs(log_content string, filename string) {
@@ -43,8 +44,9 @@ func checkFileIsExist(filename string) bool {
 }
 
 func main() {
-    fmt.Println("日志输出")
-    var log_content = "日志内容是"
+    var cst_zone = time.FixedZone("CST", 8 * 3600) // 东八
+    startTime := time.Now().In(cst_zone).Format("2006-01-02 15:04:05")
+    var log_content = "日志内容是"+startTime
     var filename    = "test.log"
     logs(log_content, filename)
 }
