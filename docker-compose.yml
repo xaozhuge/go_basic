@@ -7,5 +7,5 @@ services:
           GOPATH: ""
         volumes:
           - ./code:/go
-        container_name: 'go'
+        container_name: 'go_c'
 
