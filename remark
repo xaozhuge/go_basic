@@ -3,7 +3,7 @@ docker-compose up -d
 2. 查看容器是否正常启动
 docker ps -a
 3. 查看go版本,第一个go是服务的名称，第二个go是go命令
-docker exec go go version
+docker exec go_c go version
 4. 进入容器内
 docker exec -it go /bin/bash
 5. 在容器内，查看$GOPATH

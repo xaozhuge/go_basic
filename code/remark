@@ -1,4 +1,4 @@
 1. 当前目录 go mod init code
 生成go.mod文件
 2. 假设test.go，要执行该文件
-docker exec go go run test.go
+docker exec go_c go run test.go

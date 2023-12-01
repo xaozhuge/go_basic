@@ -2,6 +2,8 @@ version: '2'
 services:
     go_services:
         image: golang
+        ports:
+          - "8080:8080"
         tty: true
         environment:
           GOPATH: ""
