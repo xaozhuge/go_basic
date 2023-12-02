@@ -8,4 +8,5 @@ go env -w GOPROXY=https://goproxy.cn,direct
 5. 下载包文件
 go get -u github.com/go-sql-driver/mysql
 go get -u github.com/jmoiron/sqlx
+go get -u github.com/joho/godotenv
 
