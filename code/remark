@@ -1,12 +1,13 @@
 1. 当前目录 go mod init code
 生成go.mod文件
 2. 假设test.go，要执行该文件
-docker exec go_c go run test.go
+docker exec go_c go run demo/web.go
 3. 使用代理
-go env -w GOPROXY=https://goproxy.cn,direct
-4. go env
-5. 下载包文件
-go get -u github.com/go-sql-driver/mysql
-go get -u github.com/jmoiron/sqlx
-go get -u github.com/joho/godotenv
+docker exec go_c go env -w GOPROXY=https://goproxy.cn,direct
+4. 下载包文件
+docker exec go_c go get -u github.com/go-sql-driver/mysql
+docker exec go_c go get -u github.com/jmoiron/sqlx
+docker exec go_c go get -u github.com/joho/godotenv
+docker exec go_c go get -u github.com/gorilla/mux
+
 
