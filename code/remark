@@ -5,6 +5,9 @@ docker exec go_c go run demo/web.go
 docker exec go_c go run demo/mysql.go
 docker exec go_c go run demo/mongo.go
 docker exec go_c go run demo/file.go
+docker exec go_c go run demo/shell.go
+docker exec go_c go run demo/judgetype.go
+docker exec go_c go run demo/struct_func.go
 3. 下载包文件
 docker exec go_c go get -u github.com/go-sql-driver/mysql
 docker exec go_c go get -u github.com/jmoiron/sqlx
