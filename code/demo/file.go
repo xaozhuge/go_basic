@@ -43,3 +43,7 @@ func main() {
 		fmt.Printf("Error reading file: %v\n", err)
 	}
 }
+
+/*
+docker exec go_c go run demo/file.go
+*/
