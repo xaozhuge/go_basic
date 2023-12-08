@@ -18,3 +18,7 @@ func main() {
 	fmt.Println(reflect.TypeOf(stringVariable))  // string
 	fmt.Println(reflect.TypeOf(boolVariable))    // bool
 }
+
+/*
+docker exec go_c go run demo/judgetype.go
+*/
