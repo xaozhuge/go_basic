@@ -61,3 +61,7 @@ func main() {
 
 
 }
+
+/*
+docker exec go_c go run demo/mongo.go
+*/
