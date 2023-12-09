@@ -50,3 +50,7 @@ func main() {
     var filename    = "test.log"
     logs(log_content, filename)
 }
+
+/*
+docker exec go_c go run demo/logs.go
+*/
