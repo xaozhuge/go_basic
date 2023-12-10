@@ -7,7 +7,8 @@ import (
 
 func main() {
 	// 执行 shell 命令
-	command := "ls -l;pwd;"
+	// command := "ls -l;pwd;"
+	command := "du -sh log"
 	cmd := exec.Command("sh", "-c", command)
 
 	// 捕获命令的输出
