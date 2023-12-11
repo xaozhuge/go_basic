@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"reflect"
 
 	_ "github.com/go-sql-driver/mysql"
 	// 在 Go 语言中，_（下划线）通常用作空白标识符，表示忽略导入的包或变量，
@@ -62,6 +63,11 @@ func main() {
 
 	// 打印查询结果
 	for _, person := range people {
+		fmt.Println(reflect.TypeOf(person))
 		fmt.Printf("ID: %d, Event: %s, LunarDate: %s, SolarDate: %s\n", person.ID, person.Event, person.LunarDate, person.SolarDate)
 	}
 }
+
+/*
+docker exec go_c go run demo/mysql.go
+*/
