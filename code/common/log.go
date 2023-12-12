@@ -1,41 +1,32 @@
 package common
 
 import (
-    "os"
-    "io"
+    "fmt"
+    "encoding/json"
+
 )
 
-func Logs(log_content string, filename string) int {
-    var file *os.File
-    var err error
-    if checkFileIsExist(filename) { //如果文件存在
-        file, err = os.OpenFile(filename, os.O_CREATE|os.O_WRONLY|os.O_APPEND, os.ModePerm)
-    } else {//文件不存在，创建文件
-        file, err = os.Create(filename) 
+func Logs(filename string, log_var ...string) {
+    NowDate := NowDate(2)
+    Now := Now()
+    var path string
+    if len(filename) == 0 {
+        path = "log/" + NowDate+  ".log"
+    }else{
+        path = "log/" + filename + "-" + NowDate + ".log"
     }
-    checkErr(err)
-    content_length, err := io.WriteString(file, log_content+"\n") //写入文件(字符串)
-    checkErr(err)
-    return content_length
+
+    log_data := make(map[string]string)
+    log_data["time"] = Now
+
+    for i, v := range log_var {
+        key := fmt.Sprintf("var%d", i+1)
+        log_data[key] = v
+    }
+
+    jsonData, _ := json.Marshal(log_data)
+    content := string(jsonData)
+    WriteFile(path, content)
 }
 
-/**
- * 判断err
- */
-func checkErr(err error) {
-    if err != nil {
-        panic(err)
-    }
-}
-
-/**
- * 判断文件是否存在  存在返回 true 不存在返回false
- */
-func checkFileIsExist(filename string) bool {
-    var exist = true
-    if _, err := os.Stat(filename); os.IsNotExist(err) {
-        exist = false
-    }
-    return exist
-}
 
