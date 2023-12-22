@@ -20,4 +20,18 @@ func T(temp_var ...interface{}) {
     os.Exit(0)
 }
 
+func PE(func_name string){
+    fmt.Printf("%s()------------\n", func_name)
+}
+
+
+func D(temp_var ...interface{}) {
+    for _, element := range temp_var {
+        fmt.Printf("值为: %+v", element)
+        fmt.Println(" ，类型为:",reflect.TypeOf(element))
+    }
+    fmt.Println()
+}
+
+
 
