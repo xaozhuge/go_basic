@@ -1,37 +1,34 @@
 package main
 
 import (
-	"fmt"
-	"reflect"
+	"code/P"
 )
 
 func typeInt(){
-	fmt.Println("typeInt()------------")
+	P.PE("typeInt")
 	temp_var := 42
-	fmt.Println("值为:", temp_var, "，类型为:", reflect.TypeOf(temp_var))
-	fmt.Println()
+	P.D(temp_var)
 }
 
 func typeFloat64(){
-	fmt.Println("typeFloat64()------------")
+	P.PE("typeFloat64")
 	temp_var := 3.14
-	fmt.Println("值为:", temp_var, "，类型为:", reflect.TypeOf(temp_var))
-	fmt.Println()
+	P.D(temp_var)
 }
 
 func typeString(){
-	fmt.Println("typeString()------------")
+	P.PE("typeString")
 	temp_var := "Hello, World!"
-	fmt.Println("值为:", temp_var, "，类型为:", reflect.TypeOf(temp_var))
-	fmt.Println()
+	P.D(temp_var)
 }
 
 func typeBool(){
-	fmt.Println("typeBool()------------")
+	P.PE("typeBool")
 	temp_var := true
-	fmt.Println("值为:", temp_var, "，类型为:", reflect.TypeOf(temp_var))
-	fmt.Println()
+	P.D(temp_var)
 }
+
+
 
 func main() {
 	typeInt()
