@@ -28,6 +28,18 @@ func typeBool(){
 	P.D(temp_var)
 }
 
+// 定义结构体
+type Person struct {
+    Name string
+    Age  int
+}
+
+func typeStruct(){
+	P.PE("typeStruct")
+	temp_var := Person{"John", 25}
+	P.D(temp_var)
+}
+
 
 
 func main() {
@@ -35,6 +47,7 @@ func main() {
 	typeFloat64()
 	typeString()
 	typeBool()
+	typeStruct()
 }
 
 /*

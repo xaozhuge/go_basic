@@ -28,7 +28,7 @@ func PE(func_name string){
 func D(temp_var ...interface{}) {
     for _, element := range temp_var {
         fmt.Printf("值为: %+v", element)
-        fmt.Println(" ，类型为:",reflect.TypeOf(element))
+        fmt.Println(" ，类型为:",reflect.TypeOf(element), "，细分类型:", reflect.TypeOf(element).Kind())
     }
     fmt.Println()
 }
