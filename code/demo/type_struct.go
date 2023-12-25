@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+import "code/P"
 
 // 定义结构体
 type Person struct {
@@ -16,48 +17,41 @@ func (p Person) changeName() {
 }
 
 func createStruct() {
-    fmt.Println("createStruct()-----------------")
+    P.PE("createStruct")
     person := Person{"John", 25}
-    fmt.Println(person) // 输出: {John 25}
-    fmt.Println()
+    P.D(person) // 输出: {John 25}
 }
 
 func selectStructElement() {
-    fmt.Println("selectStructElement()-----------------")
+    P.PE("selectStructElement")
     person := Person{"John", 25}
-    fmt.Println(person)
-    fmt.Println("-------------")
+    P.D(person)
     // 读取结构体字段
-    fmt.Println("Name:", person.Name)
-    fmt.Println("-------------")
-    fmt.Println("Age:", person.Age)
-    fmt.Println()
+    P.D("Name:", person.Name)
+    P.D("Age:", person.Age)
 }
 
 
 func updateStructElement() {
-    fmt.Println("updateStructElement()-----------------")
+    P.PE("updateStructElement")
     person := Person{"John", 25}
-    fmt.Println(person)
-    fmt.Println("-------------")
+    P.D(person)
 
     // 修改结构体字段
     person.Name = "Alice"
     person.Age = 30
-    fmt.Println(person) // 输出: {Alice 30}
-    fmt.Println()
+    P.D(person) // 输出: {Alice 30}
 }
 
 //结构体的字段是固定的，不能直接删除字段。
 //如果需要删除字段，可以通过创建一个新的结构体实例，只包含需要的字段，来模拟删除操作。
 func deleteStructElement() {
-    fmt.Println("deleteStructElement()-----------------")
+    P.PE("deleteStructElement")
     person1 := Person{"John", 25}
-    fmt.Println(person1)
-    fmt.Println("-------------")
+    P.D(person1)
     // 模拟删除 Name 字段
     person2 := Person{Age: person1.Age}
-    fmt.Println(person2)
+    P.D(person2)
 }
 
 func main() {
