@@ -1,105 +1,90 @@
 package main
 
 import (
-	"fmt"
+	// "fmt"
+	"code/P"
 )
 
 func createSlice(){
-	fmt.Println("createSlice()---------------")
+	P.PE("createSlice")
 	mySlice := []int{1, 2, 3, 4, 5}
-	fmt.Println(mySlice)
-	fmt.Println("---------------")
+	P.D(mySlice)
 
 	// 切片（截取部分元素）
 	subset := mySlice[1:3]
-	fmt.Println(subset)
-	fmt.Println()
+	P.D(subset)
 }
 
 func selectSliceElement(){
-	fmt.Println("selectSliceElement()---------------")
+	P.PE("selectSliceElement")
 	mySlice := []int{1, 2, 3, 4, 5}
-	fmt.Println(mySlice)
-	fmt.Println("---------------")
+	P.D(mySlice)
 	// 获取元素
 	element := mySlice[0]
-	fmt.Println(element)
-	fmt.Println()
+	P.D(element)
 }
 
 func addSliceElement(){
-	fmt.Println("addSliceElement()---------------")
+	P.PE("addSliceElement")
 	mySlice := []int{1, 2, 3, 4, 5}
-	fmt.Println(mySlice)
-	fmt.Println("---------------")
+	P.D(mySlice)
 
 	// 在末尾添加元素
 	mySlice = append(mySlice, 6)
-	fmt.Println(mySlice)
-	fmt.Println("---------------")
+	P.D(mySlice)
 
 	// 在指定位置插入元素 
 	mySlice = append(mySlice[:2], append([]int{7}, mySlice[2:]...)...)
-	fmt.Println(mySlice)
-	fmt.Println()
+	P.D(mySlice)
 	
 }
 
 func deleteSliceElement(){
-	fmt.Println("deleteSliceElement()---------------")
+	P.PE("deleteSliceElement")
 	mySlice := []int{1, 2, 3, 4, 5}
-	fmt.Println(mySlice)
-	fmt.Println("---------------")
+	P.D(mySlice)
 
 
 	// 根据索引删除元素
 	indexToRemove := 2
 	mySlice = append(mySlice[:indexToRemove], mySlice[indexToRemove+1:]...)
-	fmt.Println(mySlice)
-	fmt.Println("---------------")
+	P.D(mySlice)
 
 	// 删除开头元素
 	mySlice = mySlice[1:]
-	fmt.Println(mySlice)
-	fmt.Println("---------------")
+	P.D(mySlice)
 
 	// 删除末尾元素
 	mySlice = mySlice[:len(mySlice)-1]
-	fmt.Println(mySlice)
-	fmt.Println()
+	P.D(mySlice)
 }
 
 func updateSliceElement(){
-	fmt.Println("updateSliceElement()---------------")
+	P.PE("updateSliceElement")
 	mySlice := []int{1, 2, 3, 4, 5}
-	fmt.Println(mySlice)
-	fmt.Println("---------------")
+	P.D(mySlice)
 	// 根据索引修改元素
 	mySlice[0] = 10
-	fmt.Println(mySlice)
-	fmt.Println()
+	P.D(mySlice)
 	
 }
 
 func selectSlice(){
-	fmt.Println("selectSlice()---------------")
+	P.PE("selectSlice")
 	mySlice := []int{1, 2, 3, 4, 5}
-	fmt.Println(mySlice)
-	fmt.Println("---------------")
+	P.D(mySlice)
 
 	// 获取切片长度
 	length := len(mySlice)
-	fmt.Println(length)
-	fmt.Println("---------------")
+	P.D(length)
 
 	// 获取切片容量
 	capacity := cap(mySlice)
-	fmt.Println(capacity)
-	fmt.Println("---------------")
+	P.D(capacity)
 
 	// 判断切片是否为空
 	isEmpty := len(mySlice) == 0
-	fmt.Println(isEmpty)
+	P.D(isEmpty)
 }
 
 
