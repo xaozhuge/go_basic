@@ -1,33 +1,31 @@
 package main
 
-import "fmt"
+import "code/P"
 
 func basicFor(){
-    fmt.Println("basicFor()--------------")
+    P.PE("basicFor")
     for i := 0; i < 5; i++ {
-        fmt.Println(i)
+        P.D(i)
     }
-    fmt.Println()
 }
 
 func infiniteLoop(){
-    fmt.Println("infiniteLoop()--------------")
+    P.PE("infiniteLoop")
     j := 0
     for {
-        fmt.Println("Infinite Loop")
+        P.D("Infinite Loop")
         j++
         if j == 4 {
             break
         }
     }
-    fmt.Println()
 }
 
 func imitateWhile(){
-    fmt.Println("imitateWhile()--------------")
+    P.PE("imitateWhile")
     m := 0
     for m < 5 {
-        fmt.Println(m)
+        P.D(m)
         m++
     }
 }
