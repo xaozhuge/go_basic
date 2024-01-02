@@ -1,6 +1,8 @@
 package main
 
 import "code/P"
+import "strings"
+import "fmt"
 
 
 func selectString() {
@@ -12,9 +14,56 @@ func selectString() {
     }
 }
 
+func addString1(){
+	P.PE("addString1")
+    str1 := "Hello"
+    str2 := " "
+    str3 := "World"
+    P.D(str1)
+    P.D(str2)
+    P.D(str3)
+
+    result := str1 + str2 + str3
+    P.D(result)
+}
+
+func addString2(){
+	P.PE("addString2")
+	str1 := "Hello"
+    str2 := " "
+    str3 := "World"
+    P.D(str1)
+    P.D(str2)
+    P.D(str3)
+
+    result := fmt.Sprintf("%s%s%s", str1, str2, str3)
+    P.D(result)
+}
+
+func addString3() {
+	P.PE("addString3")
+    str1 := "Hello"
+    str2 := " "
+    str3 := "World"
+    P.D(str1)
+    P.D(str2)
+    P.D(str3)
+
+    var builder strings.Builder
+    builder.WriteString(str1)
+    builder.WriteString(str2)
+    builder.WriteString(str3)
+    P.D(builder)
+
+    result := builder.String()
+    P.D(result)
+}
+
 func main() {
 	selectString()
-
+	addString1()
+	addString2()
+	addString3()
 }
 
 /*
