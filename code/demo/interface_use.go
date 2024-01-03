@@ -42,10 +42,23 @@ func selectInterface(){
     P.D(m.getName()) // Tom
 }
 
+//接口转化为实例
+func interfaceToNew(){
+    P.PE("interfaceToNew")
+    var p Person = &Student{
+        name: "Tom",
+        age:  18,
+    }
 
+    stu := p.(*Student) // 接口转为实例
+    P.D(p)
+    P.D(stu)
+    P.D(*stu)
+}
 
 func main() {
     selectInterface()
+    interfaceToNew()
 }
 
 
@@ -63,6 +76,7 @@ docker exec go_c go run demo/interface_use.go
 var _ Person = (*Student)(nil)
 将空值 nil 转换为 *Student 类型，再转换为 Person 接口，
 如果转换失败，说明 Student 并没有实现 Person 接口的所有方法。
+5. 实例可以强制类型转换为接口，接口也可以强制类型转换为实例。
 
 
 */
