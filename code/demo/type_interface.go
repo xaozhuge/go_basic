@@ -28,6 +28,16 @@ func PrintArea(s Shape) {
     fmt.Printf("Area: %f\n", s.Area())
 }
 
+func emptyInterface(){
+    P.PE("emptyInterface")
+    m := make(map[string]interface{})
+    m["name"] = "Tom"
+    m["age"] = 18
+    m["scores"] = [3]int{98, 99, 85}
+    // map[age:18 name:Tom scores:[98 99 85]]
+    P.D(m) 
+}
+
 func main() {
     // 创建 Circle 实例
     circle := Circle{Radius: 5}
@@ -43,6 +53,9 @@ func main() {
     shape = circle
     PrintArea(shape)
 
+    //空接口
+    emptyInterface()
+
 }
 
 
@@ -57,6 +70,7 @@ docker exec go_c go run demo/type_interface.go
 2. 一个结构体要被认为是实现了某个接口，必须实现该接口中定义的所有方法。
 也就是说，结构体需要提供接口中所有方法的具体实现。
 3. 多个类型实现了接口，如何调用接口的公共方法，通过参数为接口去调用
+4. 如果定义了一个没有任何方法的空接口，那么这个接口可以表示任意类型
 
 
 */
