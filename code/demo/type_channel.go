@@ -32,6 +32,11 @@ v := <-ch  // 从Channel ch中接收数据，并将数据赋值给v
 chan T          // 可以接收和发送类型为 T 的数据
 chan<- float64  // 只可以用来发送 float64 类型的数据
 <-chan int      // 只可以用来接收 int 类型的数据
+3. 看<-离谁近
+chan<- chan int    // 等价 chan<- (chan int)
+chan<- <-chan int  // 等价 chan<- (<-chan int)
+<-chan <-chan int  // 等价 <-chan (<-chan int)
+chan (<-chan int)
 
 
 
