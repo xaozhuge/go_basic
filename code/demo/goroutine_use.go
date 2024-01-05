@@ -43,6 +43,11 @@ docker exec go_c go run demo/goroutine_use.go
 通过调用 Done 方法减少计数，以及通过调用 Wait 方法等待计数器变为零。
 这样，可以在主 goroutine 中等待所有的子 goroutine 完成执行，
 然后再继续执行主 goroutine 的后续逻辑。
+3. go download()：启动新的协程并发执行 download 函数。
+4. wg.Wait()：等待所有的协程执行结束。
+5. 可以看到串行需要 3s 的下载操作，并发后，只需要 1s。
+
+
 
 
 
