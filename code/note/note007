@@ -1,0 +1,19 @@
+一、Go语言的开发工具
+1. visual studio code(VSCode)
+Microsoft产品，一个运行于MacOSX、Windows和Linux之上的，默认提供Go语言的语法高亮，安装Go语言插件，还可以支持智能提示，编译运行等功能
+2. Sublime Text
+免费使用，默认也支持Go代码语法高亮，只是保存次数达到一定数量之后就会提示是否购买
+3. Vim
+Vim是从vi发展出来的一个文本编辑器，代码补全、编译及错误跳转等方便编程的功能特别丰富，在程序员中广泛使用
+4. Emacs
+Emacs传说中的神奇，不仅仅是一个编辑器，因为功能强大，可称它为集成开发环境
+5. Eclipse IDE
+开源免费，并提供GoEclipse插件
+6. LiteIDE
+LiteIDE是一款专门为Go语言开发的跨平台轻量级集成开发环境（IDE），是国人开发的
+7. PhpStorm、WebStorm、PyCharm
+JetBrains公司的产品，都需要安装Go插件
+
+二、如何选择开发工具
+1. 先选择 VsCode，到对Go语言有一定了解后，可以使用Eclipse等IDE开发工具
+有助于更深刻的理解Go语言技术，培养代码感
