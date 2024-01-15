@@ -1,0 +1,7 @@
+一、VSCode的安装和使用
+1. Mac下VSCode的安装和使用
+细节：默认情况下，mac没有启动ssh服务，所以需要我们启动一下，才能远程传输文件
+2. 启动 sshd服务
+sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
+sudo launchctl unload -w /System/Library/LaunchDaemons/ssh.plist
+sudo launchctl list |grep ssh
