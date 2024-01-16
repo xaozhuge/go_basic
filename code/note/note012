@@ -1,0 +1,15 @@
+一、Windows下搭建Go开发环境-安装和配置SDK
+1. SDK的全称(Software Development Kit，软件开发工具包)
+2. SDK是提供给开发人员使用的，其中包含了对应开发语言的工具包
+3. Go语言的官网 golang.org
+4. mac的安装包
+	4.1 pkg是图形化安装包
+	4.2 tar.gz是解压缩就可以使用
+5. 386是32位的，64是64位的
+6. 安装目录src下是go的源代码
+7. 安装目录bin下go.exe，可以编译和运行我们的go源码
+8. 环境变量
+	8.1 GOROOT:指定SDK的安装路径
+	8.2 PATH: 添加SDK的/bin目录
+	8.3 GOPATH:工作目录，将来我们的go项目的工作路径
+9. 环境变量PATH包含%GOROOT%\bin，其中%GOROOT%表示对前面GOROOT环境变量的引用
