@@ -1,0 +1,8 @@
+一、Linux下搭建Go开发环境-安装和配置SDK
+1. uname -a 查看是否是64位
+2. Linux下配置golang环境变量
+	在/etc/profile文件中添加三条语句
+	export GOROOT=/opt/go
+	export PATH=$GOROOT/bin:$PATH
+	export GOPATH=$HOME/goprojects
+3. /etc/profile是Linux下的环境变量配置文件
