@@ -1,0 +1,5 @@
+一、Go语言快速入门
+1. 目录结构参考
+goproject/src/go_code/project01/main/hello.go
+2. 在go中，每个文件都必须归属于一个包
+3. main是函数名，是一个主函数，即我们程序的入口
