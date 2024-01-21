@@ -1,0 +1,7 @@
+一、Golang标准库API文档
+1. Golang中文网，在线标准库文档
+    https://studygolang.com/pkgdoc
+2. Golang中，调用一个函数的方式：
+    import 包
+    //使用包的函数
+    包名.函数名
