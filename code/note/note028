@@ -1,0 +1,9 @@
+一、Dos命令-文件操作
+1. 新建或者追加内容到文件
+    1.1  echo hello > abc.txt
+2. 复制或移动文件
+    2.1 copy abc.txt d:\test200\ok.txt
+    2.2 move abc.txt f:\
+3. 删除文件
+    3.1 del abc.txt
+    3.2 del *.txt
