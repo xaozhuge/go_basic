@@ -1,0 +1,15 @@
+一、整型的使用细节
+1. Golang的整型默认声明为int型
+    根据系统是int32或者int64
+2. fmt.Printf()可以用于做格式化输出
+fmt.Printf("变量的类型 %T", n1)
+3. 如何在程序查看某个变量的占用字节大小和数据类型
+    占用字节大小,使用unsafe包的Sizeof函数
+    数据类型使用 Printf的%T,例如
+    fmt.Printf("类型是%T,字节数是%d",n1,unsafe.Sizeof(n1))
+4. Golang程序中整型变量在使用时,遵守保小不保大的原则,
+即:在保证程序正确运行下,尽量使用占用空间小的数据类型
+    例如 年龄可以采用byte,而避免使用int64
+5. bit 和 byte
+    bit 位,计算机中的最小存储单位
+    byte 字节,计算机中基本存储单元,1byte=8bit
