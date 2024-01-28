@@ -1,0 +1,18 @@
+基本数据类型和string的转换
+一、基本类型转string类型(推荐)
+1. 方式1: fmt.Sprintf("%参数",表达式)
+    1.1 参数需要和表达式的数据类型相匹配
+        %d 表示 表示为十进制
+        %f 表示 浮点数,有小数部分但无指数部分
+        %t 表示 布尔值,true或者false
+        %q 表示 和%v类似,用引号括起来
+        %c 表示 该值对应的unicode码值
+    1.2 fmt.Sprintf()会返回转换后的字符串
+
+
+2. 方式2: 使用strconv包的函数
+    2.1 FormatInt() 第一个参数需要统一转换为int64
+    2.2 FormatFloat() 
+        str2 = strconv.FormatFloat(num4,'f',10, 64)
+        说明:f表示格式(科学技术法还是其他),10表示小数后保留10位,64表示是float64
+    2.3 FormatBool()
