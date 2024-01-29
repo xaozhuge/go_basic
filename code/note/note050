@@ -1,0 +1,6 @@
+string类型转基本数据类型
+一、使用的是strconv包的函数
+1. ParseBool()
+2. ParseFloat(),返回的是float64,如果想要float32,可以使用float32()转换
+3. ParseInt(),返回的是int64,如果想要int,可以使用int()转换
+4. ParseUint()

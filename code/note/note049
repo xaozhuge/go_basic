@@ -16,3 +16,4 @@
         str2 = strconv.FormatFloat(num4,'f',10, 64)
         说明:f表示格式(科学技术法还是其他),10表示小数后保留10位,64表示是float64
     2.3 FormatBool()
+    2.4 Itoa() 将int转化为字符串
