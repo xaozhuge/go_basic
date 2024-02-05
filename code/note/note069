@@ -1,0 +1,6 @@
+一、键盘输入语句
+1. 在编程中，需要接收用户输入的数据，就可以使用键盘输入语句来获取
+2. 使用fmt.Scanln() 或者 fmt.Scanf()
+    fmt.Scanln()和fmt.Scanf()接收变量的地址
+    fmt.Scanln()一次接收一个变量
+    fmt.Scanf()一次可以接收多个变量
