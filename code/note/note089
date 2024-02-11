@@ -1,0 +1,19 @@
+一、switch细节讨论
+1. switch后也可以不带表达式，类似 if --else分支来使用
+switch {
+    case age == 10 :
+        输出
+    default:
+        输出
+}
+2. switch后也可以直接声明/定义一个变量，分号结束，不推荐
+switch age := 30 {
+    case age == 10 :
+        输出 
+}
+3. switch穿透：fallthrough,如果在case语句块后增加fallthrough，
+则会执行下一个case，默认只能穿透一层
+4. switch穿透时，是输出紧跟着的case，没有进行case判断
+5. Type Switch: switch语句还可以被用于 
+type-switch来判断某个interface变量中实际指向的变量类型
+变量.(type)
