@@ -1,0 +1,4 @@
+一、switch分支结构
+1. Golang的switch没有break
+2. switch 后跟的是表达式，注意有值的就是表达式
+3. Golang 中case 后的表达式可以有多个，使用逗号隔开，
