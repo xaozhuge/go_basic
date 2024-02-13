@@ -1,0 +1,16 @@
+一、for循环细节
+1. Golang提供for-range的方式，可以方便遍历字符串和数组
+2. for循环遍历字符串，不能直接遍历字符串含有中文，需要转为切片
+var str string = "hello world"
+for i := 0;i < len(str);i++{
+    fmt.Printf("%c\n",str[i])
+}
+3. for-range遍历字符串 ，可以遍历字符串含有中文
+for index,value := range str{
+    fmt.Println(index)
+    fmt.Printf("%c\n",value)
+}
+4. 如果我们的字符串含有中文，那么传统的遍历字符串方式就是错误的，会出现乱码。
+原因：传统的对字符串的遍历是按照字节来遍历，而一个汉字在utf8编码时是对应3个字节。 
+如何解决：需要讲str 转成[]rune切片
+5. 对于for-range遍历方式而言，是按照字符的方式遍历，因此如果字符串有中文，也是可以的 
