@@ -1,0 +1,14 @@
+一、break的注意事项和使用细节
+1. break语句出现在多层嵌套的语句块中，可以通过标签指明要终止的是哪一层语句块
+2. break默认会跳出最近的for循环
+3. break后面可以指定标签，跳出标签对应的for循环
+lable1:
+for i:=0;i<10;i++{
+    lable2:
+    for j:=0;j<10;j++{
+        if j == 2{
+            //break lable1
+            //break lable2
+        }
+    }
+}
