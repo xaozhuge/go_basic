@@ -1,0 +1,6 @@
+一、跳转控制语句-continue
+1. continue标签
+here://注意这里是冒号,注意位置在紧接着for的上方
+for i:=0;i<2;i++{
+	continue here//注意如何使用
+}
