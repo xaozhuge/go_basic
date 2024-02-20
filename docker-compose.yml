@@ -9,6 +9,6 @@ services:
         environment:
           GOPATH: ""
         volumes:
-          - ./code:/go
+          - ./code:/go/src
         container_name: 'go_c'
 
