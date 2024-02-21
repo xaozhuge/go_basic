@@ -1,0 +1,9 @@
+一、函数-递归调用
+1. 根据递归实现斐波那契
+func fbnq(n int) int {
+	if n == 1 || n == 2 {
+		return 1
+	} else {
+		return fbnq(n - 1) + fbnq(n-2)
+	}
+}
