@@ -1,0 +1,10 @@
+一、函数-递归调用
+1. 猴子吃桃子
+每天吃总桃子数的一半，还要多吃一个，第10天没吃的时候，还有1个
+func peach(n int) int {
+	if n == 10 {
+		return 1
+	}else{
+		return 2 * (peach(n + 1)+1)
+	}
+}
