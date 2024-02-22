@@ -1,0 +1,9 @@
+一、函数-注意事项
+1. Go支持可变参数
+2. 支持0到多个参数
+func sum(args... int) int{
+}
+3. 支持1到多个参数
+func sum(n1 int, args... int) int{
+}
+	args是slice切片，通过args[index]可以访问到各个值
