@@ -1,0 +1,7 @@
+一、函数的练习
+1. swap(n1 *int, n2 *int) 交换n1和n2的值
+func swap(n1 *int,n2 *int){
+	*n1 = *n1+*n2
+	*n2 = *n1-*n2
+	*n1 = *n1-*n2
+}
