@@ -1,0 +1,20 @@
+一、闭包
+1. 
+func makeSuffix(suffix string) func(string) string {
+	return func (name string) string {
+		if !strings.HasSuffix(name, suffix)  {
+			name = name + suffix
+		}
+		return name
+	}
+}
+	匿名函数和使用到的suffix 构成了闭包
+2. 如果使用闭包完成，好处是只需要传入一次后缀，参考如下
+//闭包
+f:=makeSuffix(".jpg")
+fmt.Println(f("winter"))
+fmt.Println(f("bird.jpg"))
+//函数
+fmt.Println(makeSuffix2(".jpg","winter"))
+fmt.Println(makeSuffix2(".jpg","bird.jpg"))
+3. 闭包因为可以保留上次引用的某个值，所以我们传入一次就可以反复使用
