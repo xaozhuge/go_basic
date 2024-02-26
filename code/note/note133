@@ -1,0 +1,18 @@
+一、常用的字符串函数
+1. 统计字符串的长度，按字节（不是字符） len(str)
+	golang的编码统一为utf8（ascii的字符（字母和数字）占一个字节，汉字占3个字节）
+2. 字符串遍历，同时处理有中文的问题，r:=[]rune(str)
+	例如 str2 := []rune(str)，for变为按照字符遍历
+3. 字符串转整数，n,err:=strconv.Atoi("12")
+4. 整数转字符串，str=strconv.Itoa(12345)
+5. 字符串转[]byte 
+	var bytes = []byte("hello go")
+6. []byte转字符串 str = string([]byte{97,98,99})
+	[]byte里的97、98为Ascii
+7. 10进制转2，8，16进制， str=strconv.FormatInt(123,2)//2->8->16 返回对应的字符串
+8. 查找子串是否在指定的字符串中， stirng.Contains("seafood","foo")true
+9. 统计一个字符串有几个指定的子串 strings.Count("ceheese","e")//4
+10. 不区分大小写的字符串比较（==是区分大小写的）
+	fmt.Println(strings.EqualFold("abc","ABC"))//true
+11. 返回子串在字符串第一次出现的index值，如果没有返回-1
+	strings.Index("NLT_abc","abc")//4
