@@ -1,0 +1,14 @@
+一、常用的字符串函数
+1. 将字符串左右两边的空格去掉
+    strings.TrimSpace(" In a long gopher   ")
+2. 将字符串左右两边指定的字符去掉
+    strings.Trim("! hello!"," !")
+    可以指定多个，例如同时去掉空格和叹号
+3. 将字符串左边指定的字符去掉
+    strings.TrimLeft("! hello! ", " !")
+4. 将字符串右边指定的字符去掉
+    strings.TrimRight("! hello! ", " !")
+5. 判断字符串是否以指定的字符串开头
+    strings.HasPrefix("ftp://","ftp")//true
+6. 判断字符串是否以指定的字符串结束
+    strings.HasSuffix("NLT_abc.jpg","abc")//false
