@@ -1,0 +1,11 @@
+一、常用的字符串函数
+1. 返回子串在字符串最后一次出现的index，如没有,返回-1
+    strings.LastIndex("go golang","go")
+2. 将 指定的子串 替换成 另外一个子串，
+    strings.Replace("go to hello", "go", "go语言", n)
+    n可以指定你希望替换几个，如果n=-1，表示全部替换
+3. 按照指定的某个字符，为分割字符，将一个字符串拆分成字符串数组
+    strings.Split("hello,world,ok", ",")
+4. 将字符串的字母进行大小写的转换
+    strings.ToLower("Go")
+    strings.ToUpper("Go")
