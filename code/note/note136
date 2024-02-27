@@ -1,0 +1,17 @@
+一、时间和日期相关函数
+1. 获取当前时间
+    now := time.Now()
+2. 通过now可以获取年月日，时分秒
+    now.Year()
+    now.Month()
+    int(now.Month())
+    now.Day()
+    now.Hour()
+    now.Minute()
+    now.Second()
+3. %d表示10进制输出 , %02d 两位常数，不够补0
+4. fmt.Sprintf() 和 fmt.Printf() 的区别
+    前者返回一个字符串，后者输出
+5. 字符串的各个数字是固定的，必须是这样写，各个数字可以自由的组合
+    now.Format("2006-01-02 15:04:05")
+    例如 15代表小时，04代表分钟
