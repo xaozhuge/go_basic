@@ -1,0 +1,6 @@
+一、时间和日期相关函数
+1. 获取函数执行时间
+start := time.Now().Unix()
+test03()
+end := time.Now().Unix()
+执行时间为 end-start
