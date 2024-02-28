@@ -1,0 +1,14 @@
+一、时间和日期相关函数
+1. 
+const(
+    Nanosecond Duration = 1//纳秒
+	Microsecond = 1000 * Nanosecond //微秒
+	Millisecond = 1000 * Microsecond // 毫秒
+	Second = 1000 * Millisecond // 秒
+	Minute = 60 * Second // 分
+	Hour = 60 * Minute // 小时
+)
+2. 常量的作用，在程序中可用于获取指定时间单位的时间
+	例如 100毫秒 100*time.Millisecond，不能用除法去做
+3. time的Unix和UnixNano的方法
+	可以获取随机数字 
