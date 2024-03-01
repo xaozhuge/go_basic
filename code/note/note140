@@ -1,0 +1,17 @@
+一、错误处理
+1. 在默认情况下，当发生错误后（panic），程序就会退出（崩溃）
+2. Go语言不支持传统的try...catch...finally这种处理
+3. Go中引入的处理方式为:defer、panic、recover
+4. Go中可以抛出一个panic的异常，然后在defer中通过recover捕获这个异常，然后正常处理
+5. recover()内置函数，可以捕获到异常
+6.
+func test(){
+    defer func(){
+        err := recover()
+        if err != nil{
+            fmt.Println(err)
+        }
+    }()
+    fmt.Println(123)
+}
+7. 错误处理的好处，可以加入预警的代码

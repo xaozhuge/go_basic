@@ -1,0 +1,20 @@
+一、错误处理
+1. Go程序中也支持自定义错误，使用errors.New和panic内置函数
+2. errors.New("错误说明")，返回一个error类型的值，表示一个错误
+3. panic内置函数，接收一个interface{}类型的值（也就是任何值）作为参数，可以接收
+error类型的变量，输出错误信息，并退出程序 
+4. 
+func readConf(name string) (err error){
+    if name == "init.conf" {
+        return nil
+    }else{
+        return errors.New("读取配置文件错误")
+    }
+}
+
+func test02(){
+    err := readConf("init2.conf")
+    if err != nil {
+        panic(err)
+    }
+}
