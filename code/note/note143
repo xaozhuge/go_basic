@@ -1,0 +1,3 @@
+一、数组和切片
+1. fmt.Sprintf("%.2f", totalWeight/6)
+	将 totalWeight/6 四舍五入保留到小数点2返回值
