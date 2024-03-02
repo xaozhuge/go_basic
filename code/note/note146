@@ -1,0 +1,8 @@
+一、数组定义
+1. 四种初始化数组的方式
+    var num3Array01 [3]int = [3]int{1,2,3} 
+    var num3Array02 = [3]int{1,2,3} 
+    //这里的[...]是规定的写法
+    var num3Array03 = [...]int{1,2,3} 
+    //可以指定元素值对应的下标
+    var names = [3]string{1:"tom",0:"jack",2:"marry"}
