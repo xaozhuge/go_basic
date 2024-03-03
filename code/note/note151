@@ -1,0 +1,3 @@
+一、数组应用案例
+1. 两个int相除，如何让平均值保留小数
+    float64(sum)/float64(len(intArr))
