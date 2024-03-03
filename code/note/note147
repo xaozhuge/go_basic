@@ -1,0 +1,7 @@
+一、数组的遍历
+1. for-range结构遍历
+    这是Go语言一种独有的结构，可以用来遍历访问数组的元素
+2. 
+for index,value := range array01{
+    ...
+}
