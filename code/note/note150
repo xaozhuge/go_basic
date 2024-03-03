@@ -1,0 +1,3 @@
+一、数组应用案例
+1. fmt.Printf("%c", myChars[i])
+    打印byte对应的字符
