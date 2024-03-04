@@ -1,0 +1,5 @@
+一、数组复杂使用-数组反转
+1. 随机数,rand.Intn(函数)，注意 rand的包是math/rand
+2. 为了每次生成的随机数不一样，我们需要给一个seed值
+    rand.Seed(time.Now().Unix())
+    rand.Seed(time.Now().UnixNano())
