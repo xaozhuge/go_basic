@@ -1,0 +1,9 @@
+一、切片
+1. 从内存分析图看，slice的确是一个引用类型
+2. slice从底层来说，其实就是一个数据结构(struct结构体)
+3. 
+type slice struct{
+    ptr *[2]int
+    len int
+    cap int
+}
