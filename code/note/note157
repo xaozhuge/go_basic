@@ -1,0 +1,6 @@
+一、切片的遍历
+1. for循环常规方式遍历
+2. for-range结构遍历切片
+    for i,v := range slice{
+        
+    }
