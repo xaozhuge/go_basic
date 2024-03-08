@@ -1,0 +1,15 @@
+一、冒泡排序
+1. 
+func BubbleSort(arr *[5]int){
+	tmp := 0
+	for i:=0;i<len(*arr)-1;i++{
+		for j:=0;j<len(*arr)-1-i;j++{
+			if (*arr)[j] > (*arr)[j + 1]{
+				tmp = (*arr)[j]
+				(*arr)[j] = (*arr)[j + 1]
+				(*arr)[j + 1] = tmp
+			}
+		}
+		fmt.Printf("第%v轮%v\n", i+1,*arr)
+	}
+}
