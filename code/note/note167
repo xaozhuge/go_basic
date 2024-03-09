@@ -1,0 +1,13 @@
+一、二分查找
+二分查找的思路:比如我们要查找的数是findVal
+1.arr是一个有序数组，并且是从小到大排序
+2. 先找到中间的下标 middle=(leftindex+rightindex)/2，然后让中间下标的值
+和findVal比较
+    2.1 如果arr[middle]>findVal，就应该向leftindex 和  (middle-1)之间
+    2.2 如果arr[middle]<findVal，就应该向(middle-1)和  rightindex之间
+    2.2 如果arr[middle]==findVal，就找到
+3. 上面的2.1 2.2 2.3的逻辑会递归执行
+4. 怎么样的情况下，说明找不到（分析退出递归的条件）
+if(leftindex > rightindex){
+    //找不到
+}
