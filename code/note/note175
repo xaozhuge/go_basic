@@ -1,0 +1,16 @@
+一、map的使用
+1. 方式一
+    var a map[string]string
+    a = make(map[string]string,10)
+2. 方式二
+    var a = make(map[string]string)
+3. 方式三
+    var a map[string]string = map[string]string{
+        "no4": "成都",
+    }
+二、注意事项
+1. map只有一个元素，也必须有逗号
+var a map[string]string = map[string]string{
+    "no1": "zhangsan",
+}
+2. 多维map，每次使用map需要使用make
