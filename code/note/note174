@@ -1,0 +1,9 @@
+一、map介绍
+1. map是key-value数据结构，又称为字段或者关联数组，
+类似其他编程语言的集合
+2. map的key不可以是slice、map、function，因为这几个没法用 == 来判断
+map的key通常为int,string
+3. map的value通常为数字（整数、浮点数），string，map，struct
+4. 注意：声明是不会分配内存的，初始化需要make，分配内存后才能赋值和使用
+5. 在使用map前，需要先make，make的作用就是给map分配数据空间
+6. map的key-value是无序的
