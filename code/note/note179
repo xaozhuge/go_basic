@@ -1,0 +1,15 @@
+一、map排序
+1. Golang中没有一个专门的方法针对map的key进行排序
+2. Golang中的map默认是无序的，注意也不是按照添加的顺序存放的，
+每次遍历，得到的输出结果可能不一样
+3. Golang中map的排序，是先将key进行排序，然后根据key值遍历输出即可
+    a. 先将map的key放入到切片中
+    b. 然后对切片排序
+    c. 遍历切片，然后按照key来输出map的值
+4. sort.Ints(keys)
+keys为切片，将切片中的值，按照从小到大排序
+5. 将map的key放入切片
+var keys []int
+for k,_ := range map1{
+    keys = append(keys, k)
+}
