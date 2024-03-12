@@ -1,0 +1,11 @@
+一、map的增删改查
+1. map["key"] = value
+如果key还没有，就是增加，如果key存在就是修改
+2. map删除
+delete(map, "key") delete是一个内置函数，如果key存在，就删除该key-value 
+如果key不存在，不操作但是也不会报错
+3. 如果我们要删除map的所有key,没有一个专门的方法一次删除，可以遍历一下key，逐个删除
+或者map =make(...),make一个新的，让原来的成为垃圾，被gc回收
+4. map的查找
+val,ok := cities["no2"]
+其中 ok 为 true或者false
