@@ -1,0 +1,7 @@
+一、map切片
+1. 切片的数据类型如果是map，则我们称为slice of map,map切片
+这样使用则map个数就可以动态变化了
+2. 切片的使用，需要使用make
+monsters = make([]map[string]string, 0)
+3. 动态map切片，需要使用append
+monsters = append(monsters, newMonster0)
