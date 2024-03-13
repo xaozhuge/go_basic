@@ -1,0 +1,7 @@
+一、map切片
+1. 判断map是否有键值
+v, ok := users[name]
+users[name] != nil
+2. 注意 users map[string]map[string]string
+使用 users 需要 make(map[string]map[string]string, 10)
+使用 users[name] 也需要  make(map[string]string, 2)
