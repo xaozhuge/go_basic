@@ -1,4 +1,4 @@
-一、map切片
+一、map练习
 1. 判断map是否有键值
 v, ok := users[name]
 users[name] != nil
