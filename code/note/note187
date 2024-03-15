@@ -1,0 +1,13 @@
+一、结构体
+1. 创建结构体
+p1 := make(person)  ===== var p1 *person = make(person)
+(*p1).name ===== p1.name
+go的设计者，为了使用方便，底层会对p1.name进行处理，会给p1加上取值运算(*p1)
+
+2. 创建结构体
+var p1 *person = &person{}
+3. 结构体指针访问字段的标准方式应该是(*结构体指针).字段名
+比如(*person).Name = "tom"
+但go做了一个简化，也支持 结构体指针.字段名
+比如 person.Name ="tom"
+更加符合程序员使用的习惯，go编译器底层对person.Name做了转化(*person).Name
