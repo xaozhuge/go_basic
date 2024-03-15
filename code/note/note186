@@ -1,0 +1,10 @@
+一、结构体
+1. 如何声明结构体
+type 结构体名称 struct{
+    field1 type
+    field2 type
+}
+2. 指针，slice和map的零值是nil，即还没有分配空间
+使用的时候需要先make
+3. 切片使用的时候需要先make,并且跟make的长度有关
+4. map使用的时候需要先make,map会自动增长
