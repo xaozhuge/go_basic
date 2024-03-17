@@ -1,0 +1,3 @@
+一、结构体方法
+1. func (p Person) getSum(n1 int, n2 int) int 
+注意方法的参数传递和返回值
