@@ -1,0 +1,19 @@
+一、结构体
+1. struct的每个字段上，可以写上一个tag，该tag可以通过反射机制获取
+常见的使用场景就是序列化和反序列化
+2. 返回值要是json，需要在json包里使用结构体变量，首字母需要大写，但是其他程序
+的命名标准首字母不是大写，所以用到tag
+3. 引入json包 
+import "encoding/json"
+4. 将结构体转化为字符转 json.Marshal,注意有2个返回值
+jsondata,err  := json.Marshal(monster1)
+5. 注意json.Marshal 返回的第一个参数是[]byte
+6. 将[]byte转化为字符串
+stringdata := string(jsondata)
+7. 配置返回的字段，注意反引号``，注意json:是固定写法，注意双引号字段名
+type Monster struct{
+	Name string `json:"name"`
+	Age int `json:"age"`
+	Skill string `json:"skill"`
+}
+8. `json:"name"`就是结构体的tag
