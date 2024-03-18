@@ -1,0 +1,4 @@
+一、方法
+1. 保留两位小数
+fmt.Printf("%.2f\n", me.add())
+res := fmt.Sprintf("%.2f", me.add())
