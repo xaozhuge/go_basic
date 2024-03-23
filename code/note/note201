@@ -1,0 +1,13 @@
+一、创建结构体变量时指定字段值
+1. Golang在创建结构体实例（变量）时，可以直接指定字段的值
+    stu1  := Stuent{"tom2", 10}
+    stu2  := Stuent{
+        Name: "tom3",//注意逗号
+        Age: "30",
+    }
+    stu5 := &Stuent{"smith",30}
+    stu6 := &Stuent{
+        Name:"smith",
+        Age:30,
+    }
+    
