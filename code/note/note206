@@ -1,0 +1,34 @@
+一、面向对象编程-封装
+1. 封装案例
+type person struct {
+	Name string
+	age int
+	sal float64
+}
+
+func NewPerson(name string) *person{
+	return &person{
+		Name:name,
+	}
+}
+
+func (p *person) SetAge(age int) {
+	if age  > 0 && age < 150 {
+		p.age = age
+	}else{
+		fmt.Println("年龄范围不正确...")
+	}
+}
+
+func (p *person) GetAge() int {
+	return p.age
+}
+
+2. 封装调用
+p := model.NewPerson("Smith")
+p.SetAge(18)
+p.SetSal(5000)
+fmt.Println(*p)
+fmt.Println(p.Name)
+fmt.Println(p.GetAge())
+fmt.Println(p.GetSal())
